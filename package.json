@@ -1,0 +1,37 @@
+{
+  "name": "studex-board-bot",
+  "version": "1.0.0",
+  "description": "STUDEX Board Bot - Local LLM agent for board meetings using Ollama",
+  "main": "dist/server-board.js",
+  "scripts": {
+    "dev:board-bot": "ts-node src/server-board.ts",
+    "build": "tsc",
+    "start": "node dist/server-board.js",
+    "test": "curl -X POST http://localhost:3007/api/test",
+    "health": "curl http://localhost:3007/health",
+    "setup": "bash BOARD-BOT-SETUP.sh"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "axios": "^1.6.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "ts-node": "^10.9.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "keywords": [
+    "board-bot",
+    "ollama",
+    "local-llm",
+    "studex",
+    "ai-agent",
+    "meeting-bot"
+  ],
+  "author": "STUDEX Group",
+  "license": "MIT"
+}
